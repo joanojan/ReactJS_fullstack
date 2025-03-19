@@ -17,9 +17,11 @@ sequenceDiagram
     server-->>browser: the JavaScript file
     deactivate server
 
+    Note left of server: The javascript is what changes in the spa.
+
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/data.json
     activate server
     server-->>browser: [{ "content": "HTML is easy", "date": "2023-1-1" }, ... ]
     deactivate server
 
-    Note left of server: The process is the same when loading the page for the first time. 
+    Note left of server: Loading the spa the first time will fetch all the notes.   
