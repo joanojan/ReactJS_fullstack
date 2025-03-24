@@ -1,6 +1,6 @@
-const Header = (props) => {
-  console.log(props)
-  return <h1>{props.course}</h1>
+const Header = ({course}) => {
+  console.log(course)
+  return <h1>{course}</h1>
 }
 
 const Content = (props) => {
@@ -13,15 +13,16 @@ const Content = (props) => {
   )
 }
 
-const Part = (props) => {
-  console.log(props)
-  return <p>{props.part} {props.exercises}</p>
+const Part = ({part, exercises}) => {
+  console.log(part, exercises)
+  return <p>{part} {exercises}</p>
 }
 
-const Total = (props) => {
+const Total = ({parts}) => {
+  console.log(parts)
   return (
     <div>
-      <p>Number of exercises {props.parts[0].exercises+props.parts[1].exercises+props.parts[2].exercises}</p>
+      <p>Number of exercises {parts[0].exercises+parts[1].exercises+parts[2].exercises}</p>
     </div>
   )
 }
