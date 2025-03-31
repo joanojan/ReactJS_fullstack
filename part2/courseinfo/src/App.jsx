@@ -1,8 +1,15 @@
 import Course from './components/Course'
 
-const App = ({ course }) => {
+const App = ({ courses }) => {
   return (
-    <Course course={course} />
+    <div>
+      <h1>Web develpoment curriculum</h1>
+    <ul>
+      {courses.map(course =>
+        <Course key={course.id} course={course} />
+      )}
+    </ul>
+    </div>
   )
 }
 
